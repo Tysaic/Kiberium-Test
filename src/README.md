@@ -3,6 +3,11 @@ En este Readme se detalla la ejecución del test enviado tanto local como en Doc
 
 ## Ejecutar localmente
 
+Ejecutamos el entorno virtual:
+```
+    source venv/bin/activate
+```
+
 Primero instalamos las librerias:
 ```
 	pip install -r requirements.txt
