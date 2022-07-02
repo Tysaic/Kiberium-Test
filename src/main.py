@@ -28,7 +28,7 @@ async def get_by_id(
     ):
     get_pattern_number = patent_by_id(db, patent_id)
     if get_pattern_number:
-        return {"id": get_pattern_number.number}
+        return {"patent": get_pattern_number.number}
     else:
         raise HTTPException(status_code=422, detail={"alert": "ID doesn't exists"})
 
@@ -41,7 +41,7 @@ async def get_by_number(
     if regex.match(patent_number):
         get_pattern_id = patent_by_number(db, patent_number)
         if get_pattern_id:
-            return {"patent": get_pattern_id.id}
+            return {"id": get_pattern_id.id}
         else:
             raise HTTPException(status_code=422, detail={"alert": "The patent doesn't exists"})
     else:
