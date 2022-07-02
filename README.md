@@ -5,6 +5,8 @@ En este Readme se detalla la ejecución del test enviado tanto local como en Doc
 
 Ejecutamos el entorno virtual:
 ```
+    cd src/
+
     source venv/bin/activate
 ```
 
