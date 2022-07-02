@@ -3,12 +3,13 @@ from starlette.responses import RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from dbengine.database import SessionLocal, engine
+from models.models import Base
 from functions import patent_by_id, patent_by_number
 import re
 
 app = FastAPI()
 
-#Base.metadata.create_all(bind=engine)
+Base.metadata.create_all(bind=engine)
 
 def get_db():
     db = SessionLocal()

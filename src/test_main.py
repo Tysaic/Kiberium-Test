@@ -4,6 +4,8 @@ from main import app
 
 client = TestClient(app)
 #EXISTING HOME
+
+
 def test_existing_id():
     response = client.get('/v1/api/patent/id/12')
     assert response.status_code == 200
