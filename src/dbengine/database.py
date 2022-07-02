@@ -8,4 +8,3 @@ SQLALCHEMY_DATABASE_URL = "mysql+pymysql://kiberium:root1234@localhost/kiberium_
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-Base = declarative_base()
