@@ -9,7 +9,7 @@ class Patent(Base):
     __tablename__ = "patent"
 
     id = Column(Integer, primary_key=True, autoincrement="auto")
-    number = Column(String(7))
+    number = Column(String(7), unique=True)
 
     def __str__(self):
         return self.number
